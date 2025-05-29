@@ -427,15 +427,6 @@
   background: #374151;
 }
 
-.project-link.demo {
-  background: #2563eb;
-  color: white;
-}
-
-.project-link.demo:hover {
-  background: #1d4ed8;
-}
-
 /* Education Styles */
 .education-timeline {
   border-left: 4px solid #2563eb;
@@ -498,10 +489,6 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
-}
-
-.footer-text {
-  margin-bottom: 1rem;
 }
 
 .footer-links {

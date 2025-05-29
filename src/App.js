@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Github, ExternalLink, Mail, Linkedin, Code, Database, MessageSquare, User, Briefcase, GraduationCap, Phone } from 'lucide-react';
+import { Github, Mail, Linkedin, Code, Database, MessageSquare, User, Briefcase, GraduationCap, Phone } from 'lucide-react';
 import './Portfolio.css'; 
 
 const Portfolio = () => {
@@ -15,22 +15,20 @@ const Portfolio = () => {
     {
       id: 1,
       title: "AI Chatbot Applikasjon",
-      description: "En full-stack chatbot-applikasjon bygget med React frontend og Node.js/Express backend, integrert med OpenAI API for intelligente samtaler.",
+      description: "En React frontend med en enkel Express.js backend for API-kall, integrert med OpenAI API for intelligente samtaler.",
       technologies: ["React", "Node.js", "Express.js", "OpenAI API"],
-      type: "Full Stack",
+      type: "Frontend med API-integrasjon",
       github: "#",
-      demo: "#",
       highlights: ["Sanntids chatgrensesnitt", "OpenAI API-integrasjon", "Responsivt design"]
     },
     {
       id: 2,
-      title: "React Dashboard",
-      description: "En responsiv dashboard-applikasjon som viser moderne React-utviklingspraksis med komponentbasert arkitektur.",
-      technologies: ["React", "JavaScript", "CSS"],
-      type: "Frontend",
+      title: "OAP Transportsystem",
+      description: "En Java-basert skrivebordsapplikasjon utviklet med Swing, tilkoblet en MySQL-database. Systemet er designet for å administrere kunder og transportdata gjennom et brukervennlig grensesnitt.",
+      technologies: ["Java", "Swing", "MySQL", "Maven"],
+      type: "Skrivebordsapplikasjon med databaseintegrasjon",
       github: "#",
-      demo: "#",
-      highlights: ["Komponentbasert arkitektur", "Responsivt design", "Moderne UI/UX"]
+      highlights: ["CRUD-operasjoner for kunde- og transportdata", "MySQL-databaseintegrasjon", "Dynamisk temabytting", "Eksport av data", "JavaDoc-dokumentasjon inkludert"]
     },
     {
       id: 3,
@@ -39,7 +37,6 @@ const Portfolio = () => {
       technologies: ["Node.js", "Express.js", "JavaScript"],
       type: "Backend",
       github: "#",
-      demo: "#",
       highlights: ["RESTful arkitektur", "Autentiseringssystem", "Feilhåndtering"]
     }
   ];
@@ -91,10 +88,6 @@ const Portfolio = () => {
             <Github size={16} />
             Kode
           </a>
-          <a href={project.demo} className="project-link demo">
-            <ExternalLink size={16} />
-            Demo
-          </a>
         </div>
       </div>
     </div>
@@ -107,7 +100,7 @@ const Portfolio = () => {
         <div className="header-content">
           <div className="header-info">
             <h1>Yazan Alsayegh</h1>
-            <p>IT-student & Full Stack Utvikler</p>
+            <p>IT-student & Front-End Utvikler</p>
           </div>
           <div className="header-links">
             <a href="mailto:yazanalsayegh@icloud.com">
@@ -154,10 +147,10 @@ const Portfolio = () => {
               <div style={{display: 'none', fontSize: '3rem'}}>👨‍💻</div>
             </div>
             <h1 className="hero-title">Yazan Alsayegh</h1>
-            <h2 className="hero-subtitle">Full Stack Utvikler & IT-student</h2>
+            <h2 className="hero-subtitle">Front-End Utvikler & IT-student</h2>
             <p className="hero-description">
               Lidenskapelig opptatt av å skape innovative webløsninger med moderne teknologier.
-              Spesialiserer meg på React, Node.js og AI-integrasjon for å bygge applikasjoner som utgjør en forskjell.
+              Spesialiserer meg på React og frontend-utvikling, med erfaring fra mindre prosjekter med Express.js og OpenAI API-integrasjon.
             </p>
             <div className="hero-buttons">
               <button 
@@ -187,14 +180,14 @@ const Portfolio = () => {
             <h2 className="section-title">Om Meg</h2>
             <div>
               <p className="section-description">
-                Jeg er en lidenskapelig IT-student med praktisk erfaring innen full-stack webutvikling.
+                Jeg er en lidenskapelig IT-student med praktisk erfaring innen front-end webutvikling.
                 Under mine universitetsstudier har jeg jobbet med flere prosjekter som demonstrerer min
-                evne til å bygge komplette webapplikasjoner fra frontend til backend.
+                evne til å bygge responsive og brukervennlige nettsider og applikasjoner.
               </p>
               <p className="section-description">
-                Min ekspertise omfatter moderne webteknologier inkludert React for frontend-utvikling
-                og Node.js med Express.js for backend-tjenester. Jeg har erfaring med integrering av
-                tredjeparts API-er og bygging av responsive, brukervennlige applikasjoner.
+                Min ekspertise omfatter moderne webteknologier med fokus på React for frontend-utvikling.
+                Jeg har også erfaring med enklere backend-løsninger ved bruk av Node.js og Express.js for 
+                API-kall, spesielt med OpenAI API-integrasjon.
               </p>
               <p className="section-description">
                 Jeg søker aktivt muligheter for å anvende mine ferdigheter i et profesjonelt miljø
@@ -272,7 +265,7 @@ const Portfolio = () => {
               <h2 className="projects-header-title">Mine Prosjekter</h2>
               <p className="projects-header-description">
                 Her er noen av prosjektene jeg har jobbet med under mine universitetsstudier,
-                som viser mine ferdigheter innen full-stack utvikling.
+                som viser mine ferdigheter innen front-end utvikling og API-integrasjon.
               </p>
             </div>
             
@@ -294,9 +287,9 @@ const Portfolio = () => {
                 <h3 className="education-title">Bachelorgrad i Informasjonsteknologi</h3>
                 <p className="education-institution">Universitetsnavn • Forventet fullføring: År</p>
                 <p className="education-description">
-                  Fokusert på programvareutvikling, webteknologier og full-stack applikasjonsutvikling.
-                  Fullført prosjekter i React, Node.js og API-integrasjon, inkludert en chatbot-applikasjon
-                  ved bruk av OpenAI API.
+                  Fokusert på frontend-utvikling, webteknologier og brukergrensesnitt.
+                  Fullført prosjekter i React, med erfaring fra mindre prosjekter i Node.js og API-integrasjon, 
+                  inkludert en chatbot-applikasjon ved bruk av OpenAI API.
                 </p>
               </div>
               
@@ -319,7 +312,6 @@ const Portfolio = () => {
       {/* Footer */}
       <footer className="footer">
         <div className="footer-content">
-          <p className="footer-text">Klar til å bringe dine ideer til live med kode!</p>
           <div className="footer-links">
             <a href="mailto:yazanalsayegh@icloud.com" className="footer-link">
               yazanalsayegh@icloud.com
