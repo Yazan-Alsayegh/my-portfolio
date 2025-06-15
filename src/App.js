@@ -5,6 +5,13 @@ import './Portfolio.css';
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const skills = {
     frontend: ['HTML', 'CSS', 'JavaScript', 'React'],
     backend: ['Node.js', 'Express.js'],
@@ -14,12 +21,12 @@ const Portfolio = () => {
   const projects = [
     {
       id: 1,
-      title: "AI Chatbot Applikasjon",
-      description: "En React frontend med en enkel Express.js backend for API-kall, integrert med OpenAI API for intelligente samtaler.",
-      technologies: ["React", "Node.js", "Express.js", "OpenAI API"],
-      type: "Frontend med API-integrasjon",
-      github: "#",
-      highlights: ["Sanntids chatgrensesnitt", "OpenAI API-integrasjon", "Responsivt design"]
+      title: "Treningssenter Webapplikasjon",
+      description: "En moderne React-basert webapplikasjon utviklet for treningssentre, tilkoblet Firebase for sanntids database og autentisering. Systemet er designet for å håndtere medlemskap, treningsplaner og brukerinteraksjon gjennom et responsivt web-grensesnitt.",
+      technologies: ["React", "JavaScript", "Firebase", "Firestore", "CSS", "React Router"],
+      type: "Webapplikasjon med databaseintegrasjon",
+      github: "https://github.com/Yazan-Alsayegh/TreningsCenter-Webapplikasjon",
+      highlights: ["Firebase-autentisering og sikkerhet", "Medlemskapshåndtering og abonnementsplaner", "Responsive design for alle enheter", "Kontaktskjema og brukerinteraksjon", "Medlemsportal med profilhåndtering",]
     },
     {
       id: 2,
@@ -27,7 +34,7 @@ const Portfolio = () => {
       description: "En Java-basert skrivebordsapplikasjon utviklet med Swing, tilkoblet en MySQL-database. Systemet er designet for å administrere kunder og transportdata gjennom et brukervennlig grensesnitt.",
       technologies: ["Java", "Swing", "MySQL", "Maven"],
       type: "Skrivebordsapplikasjon med databaseintegrasjon",
-      github: "#",
+      github: "https://github.com/Yazan-Alsayegh/OAP-Transportsystem",
       highlights: ["CRUD-operasjoner for kunde- og transportdata", "MySQL-databaseintegrasjon", "Dynamisk temabytting", "Eksport av data", "JavaDoc-dokumentasjon inkludert"]
     },
     {
@@ -43,7 +50,10 @@ const Portfolio = () => {
 
   const NavButton = ({ section, icon: Icon, label }) => (
     <button
-      onClick={() => setActiveSection(section)}
+      onClick={() => {
+        setActiveSection(section);
+        scrollToTop();
+      }}
       className={`nav-button ${activeSection === section ? 'active' : ''}`}
     >
       <Icon size={18} />
@@ -284,8 +294,8 @@ const Portfolio = () => {
             
             <div className="education-timeline">
               <div className="education-item">
-                <h3 className="education-title">Bachelorgrad i Informasjonsteknologi</h3>
-                <p className="education-institution">Universitetsnavn • Forventet fullføring: År</p>
+                <h3 className="education-title">Bachelorgrad i IT og Ledelse </h3>
+                <p className="education-institution">Universitetet i Sørøst-Norge • 2022 - 2025</p>
                 <p className="education-description">
                   Fokusert på frontend-utvikling, webteknologier og brukergrensesnitt.
                   Fullført prosjekter i React, med erfaring fra mindre prosjekter i Node.js og API-integrasjon, 
