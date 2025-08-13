@@ -41,12 +41,12 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: "Express API Server",
-      description: "En RESTful API-server bygget med Express.js og Node.js, med autentisering og dataadministrasjon.",
-      technologies: ["Node.js", "Express.js", "JavaScript"],
-      type: "Backend API",
-      github: "#",
-      highlights: ["RESTful arkitektur", "Autentiseringssystem", "Feilhåndtering"]
+      title: "FitX-Treningssenter Bacheloroppgave",
+      description: "Et moderne bookingsystem utviklet med React og Firebase, designet for å administrere treningsøkter, medlemskap og brukerinteraksjon. Systemet tilbyr sanntids booking, AI-chatbot assistanse og personaliserte treningsanbefalinger gjennom en responsiv webapplikasjon.",
+      technologies: ["React", "Firebase" ,"Open AI" , "Chatbot" , "React Router" ,"Node.js", "Express.js", "JavaScript"],
+      type: "Fullstack Webapplikasjon",
+      github: "https://github.com/Yazan-Alsayegh/FitX-Treningssenter-Bacheloroppgave",
+      highlights: ["React for frontend-utvikling", "Firebase Firestore for sanntids database", "Express.js for chatbot backend", "OpenAI API for AI-assistanse", "JavaScript (ES6+) for applikasjonslogikk", "Firebase Authentication for brukersikkerhet", "CSS for responsivt design", "Firebase OnSnapshot for sanntidsoppdateringer"]
     }
   ];
 
@@ -99,13 +99,13 @@ const Portfolio = () => {
               </div>
             </div>
             <div className="header-social">
-              <a href="mailto:yazanalsayegh@icloud.com" className="social-link">
+              <a href="mailto:yazanalsayegh@icloud.com" className="social-link" target="_blank" rel="noopener noreferrer">
                 <Mail size={20} />
               </a>
-              <a href="https://www.linkedin.com/in/yazan-alsayegh-761baa2b1/" className="social-link">
+              <a href="https://www.linkedin.com/in/yazan-alsayegh-761baa2b1/" className="social-link" target="_blank" rel="noopener noreferrer">
                 <Linkedin size={20} />
               </a>
-              <a href="https://github.com/Yazan-Alsayegh" className="social-link">
+              <a href="https://github.com/Yazan-Alsayegh" className="social-link" target="_blank" rel="noopener noreferrer">
                 <Github size={20} />
               </a>
             </div>
@@ -342,6 +342,8 @@ const Portfolio = () => {
                     <a 
                       href={project.github} 
                       className="project-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <Github size={18} />
                       Kode
@@ -415,13 +417,13 @@ const Portfolio = () => {
       <footer className="footer">
         <div className="footer-container">
           <div className="footer-links">
-            <a href="mailto:yazanalsayegh@icloud.com" className="footer-link">
+            <a href="mailto:yazanalsayegh@icloud.com" className="footer-link" target="_blank" rel="noopener noreferrer">
               yazanalsayegh@icloud.com
             </a>
-            <a href="https://github.com/Yazan-Alsayegh" className="footer-link">
+            <a href="https://github.com/Yazan-Alsayegh" className="footer-link" target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
-            <a href="https://linkedin.com/in/yazan-alsayegh-761baa2b1/" className="footer-link">
+            <a href="https://linkedin.com/in/yazan-alsayegh-761baa2b1/" className="footer-link" target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>
           </div>
