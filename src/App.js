@@ -169,8 +169,7 @@ const Portfolio = () => {
               </h2>
               
               <p className="hero-description">
-                Lidenskapelig opptatt av å skape innovative webløsninger med moderne teknologier.
-                Spesialiserer meg på React og frontend-utvikling, med erfaring fra mindre prosjekter med Express.js og OpenAI API-integrasjon.
+                Engasjert utvikler med erfaring i React og frontend-utvikling, kombinert med backend-prosjekter i Express.js og API-integrasjoner. Har også utviklet en Java-basert desktop-app for et transportselskap, og brenner for å skape brukervennlige og innovative løsninger.
               </p>
               
               <div className="hero-buttons">
@@ -205,18 +204,13 @@ const Portfolio = () => {
                 
                 <div className="about-content">
                   <p>
-                    Jeg er en lidenskapelig IT-student med praktisk erfaring innen front-end webutvikling.
-                    Under mine universitetsstudier har jeg jobbet med flere prosjekter som demonstrerer min
-                    evne til å bygge responsive og brukervennlige nettsider og applikasjoner.
+                    Jeg er nyutdannet med bachelor i IT og ledelse, og har en sterk interesse for utvikling. Jeg brenner for å bygge brukervennlige løsninger med moderne teknologier som React på frontend og Express.js på backend, men jeg er også åpen og lærevillig når det gjelder andre IT-roller.
                   </p>
                   <p>
-                    Min ekspertise omfatter moderne webteknologier med fokus på React for frontend-utvikling.
-                    Jeg har også erfaring med enklere backend-løsninger ved bruk av Node.js og Express.js for 
-                    API-kall, spesielt med OpenAI API-integrasjon.
+                 Gjennom studier og prosjekter har jeg fått solid erfaring med webutvikling, API-integrasjoner og programvareutvikling. I tillegg har jeg jobbet som IT Service Desk-medarbeider ved Melsom videregående skole, hvor jeg fikk praktisk erfaring med brukerstøtte, feilsøking, systemadministrasjon og kommunikasjon med både elever og ansatte.
                   </p>
                   <p>
-                    Jeg søker aktivt muligheter for å anvende mine ferdigheter i et profesjonelt miljø
-                    og bidra til innovative prosjekter mens jeg fortsetter å lære og vokse som utvikler.
+                  Jeg ønsker nå å bidra i et profesjonelt miljø der jeg kan videreutvikle mine ferdigheter, lære nye teknologier og skape verdi gjennom engasjement, samarbeid og kontinuerlig læring.
                   </p>
                 </div>
                 
@@ -234,7 +228,7 @@ const Portfolio = () => {
                       <div className="contact-icon contact-icon-phone">
                         <Phone size={20} />
                       </div>
-                      <span>45142504</span>
+                      <span>451 42 504</span>
                     </div>
                   </div>
                 </div>
