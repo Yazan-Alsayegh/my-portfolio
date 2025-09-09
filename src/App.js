@@ -5,6 +5,9 @@ import './Portfolio.css';
 const Portfolio = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [galleryOpen, setGalleryOpen] = useState(false);
+  const [galleryImages, setGalleryImages] = useState([]);
+  const [galleryIndex, setGalleryIndex] = useState(0);
 
   useEffect(() => {
     const handleMouseMove = (e) => {
@@ -16,8 +19,8 @@ const Portfolio = () => {
 
   const skills = {
     frontend: ['HTML', 'CSS', 'JavaScript', 'React'],
-    backend: ['Node.js', 'Express.js'],
-    other: ['OpenAI API', 'Git', 'GitHub', 'RESTful APIs']
+    backend: ['Java', 'Node.js', 'Express.js'],
+    other: ['OpenAI API', 'Git', 'GitHub', 'RESTful APIs', 'Responsive Design', 'Firebase', 'SQL', 'MySQL', 'UI/UX-design (Figma)']
   };
 
   const projects = [
@@ -28,7 +31,10 @@ const Portfolio = () => {
       technologies: ["React", "JavaScript", "Firebase", "Firestore", "CSS", "React Router"],
       type: "Webapplikasjon",
       github: "https://github.com/Yazan-Alsayegh/TreningsCenter-Webapplikasjon",
-      highlights: ["Firebase-autentisering og sikkerhet", "Medlemskapshåndtering og abonnementsplaner", "Responsive design for alle enheter", "Kontaktskjema og brukerinteraksjon", "Medlemsportal med profilhåndtering"]
+      highlights: ["Firebase-autentisering og sikkerhet", "Medlemskapshåndtering og abonnementsplaner", "Responsive design for alle enheter", "Kontaktskjema og brukerinteraksjon", "Medlemsportal med profilhåndtering"],
+      screenshots: [
+        require('./assets/Treningssenter.png')
+      ]
     },
     {
       id: 2,
@@ -37,7 +43,12 @@ const Portfolio = () => {
       technologies: ["Java", "Swing", "MySQL", "Maven"],
       type: "Desktop App",
       github: "https://github.com/Yazan-Alsayegh/OAP-Transportsystem",
-      highlights: ["CRUD-operasjoner for kunde- og transportdata", "MySQL-databaseintegrasjon", "Dynamisk temabytting", "Eksport av data", "JavaDoc-dokumentasjon inkludert"]
+      highlights: ["CRUD-operasjoner for kunde- og transportdata", "MySQL-databaseintegrasjon", "Dynamisk temabytting", "Eksport av data", "JavaDoc-dokumentasjon inkludert"],
+      screenshots: [
+        require('./assets/OAP-Transportsystem 1.png'),
+        require('./assets/OAP-Transportsystem 2.png'),
+        require('./assets/OAP-Transportsystem 3.png')
+      ]
     },
     {
       id: 3,
@@ -46,7 +57,13 @@ const Portfolio = () => {
       technologies: ["React", "Firebase" ,"Open AI" , "Chatbot" , "React Router" ,"Node.js", "Express.js", "JavaScript"],
       type: "Fullstack Webapplikasjon",
       github: "https://github.com/Yazan-Alsayegh/FitX-Treningssenter-Bacheloroppgave",
-      highlights: ["React for frontend-utvikling", "Firebase Firestore for sanntids database", "Express.js for chatbot backend", "OpenAI API for AI-assistanse", "JavaScript (ES6+) for applikasjonslogikk", "Firebase Authentication for brukersikkerhet", "CSS for responsivt design", "Firebase OnSnapshot for sanntidsoppdateringer"]
+      highlights: ["React for frontend-utvikling", "Firebase Firestore for sanntids database", "Express.js for chatbot backend", "OpenAI API for AI-assistanse", "JavaScript (ES6+) for applikasjonslogikk", "Firebase Authentication for brukersikkerhet", "CSS for responsivt design", "Firebase OnSnapshot for sanntidsoppdateringer"],
+      screenshots: [
+        require('./assets/FitX-Treningssenter 1.png'),
+        require('./assets/FitX-Treningssenter 2.png'),
+        require('./assets/FitX-Treningssenter 3.png'),
+        require('./assets/FitX-Treningssenter 4.png')
+      ]
     }
   ];
 
@@ -95,7 +112,7 @@ const Portfolio = () => {
                 <h1 className="brand-name">
                   Yazan Alsayegh
                 </h1>
-                <p className="brand-subtitle">Front-End Utvikler</p>
+                <p className="brand-subtitle">IT Graduate</p>
               </div>
             </div>
             <div className="header-social">
@@ -148,7 +165,7 @@ const Portfolio = () => {
               </h1>
               
               <h2 className="hero-subtitle">
-                Front-End Utvikler & IT-student
+                IT Graduate
               </h2>
               
               <p className="hero-description">
@@ -339,6 +356,20 @@ const Portfolio = () => {
                       </div>
                     </div>
                     
+                    {/* Screenshots */}
+                    {project.screenshots && project.screenshots.length > 0 && (
+                      <button
+                        className="gallery-btn"
+                        onClick={() => {
+                          setGalleryImages(project.screenshots);
+                          setGalleryIndex(0);
+                          setGalleryOpen(true);
+                        }}
+                      >
+                        Åpne Galleri
+                      </button>
+                    )}
+                    
                     <a 
                       href={project.github} 
                       className="project-link"
@@ -430,6 +461,38 @@ const Portfolio = () => {
           <div className="footer-divider"></div>
         </div>
       </footer>
+
+      {/* Gallery Modal */}
+      {galleryOpen && (
+        <div className="gallery-modal">
+          <div className="gallery-overlay" onClick={() => setGalleryOpen(false)}></div>
+          <div className="gallery-content">
+            <button className="gallery-close" onClick={() => setGalleryOpen(false)}>×</button>
+            <button
+              className="gallery-prev"
+              onClick={() => setGalleryIndex((galleryIndex - 1 + galleryImages.length) % galleryImages.length)}
+              disabled={galleryImages.length <= 1}
+            >
+              ‹
+            </button>
+            <img
+              src={galleryImages[galleryIndex]}
+              alt={`Gallery ${galleryIndex + 1}`}
+              className="gallery-img"
+            />
+            <button
+              className="gallery-next"
+              onClick={() => setGalleryIndex((galleryIndex + 1) % galleryImages.length)}
+              disabled={galleryImages.length <= 1}
+            >
+              ›
+            </button>
+            <div className="gallery-counter">
+              {galleryIndex + 1} / {galleryImages.length}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
