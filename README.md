@@ -10,7 +10,6 @@ Se nettsiden her: [https://Yazan-Alsayegh.github.io/my-portfolio](https://Yazan-
 Denne porteføljen inkluderer:  
 - Interaktive webprosjekter jeg har laget  
 - Moderne **React** frontend med responsivt design  
-- Egendefinert favicon og nettsidetittel  
 - Lenker til GitHub-prosjektene mine og kontaktinformasjon
 
 ## 🛠 Teknologier som er brukt
@@ -26,3 +25,4 @@ my-portfolio/
 ├─ src/ # React-komponenter og stilfiler
 ├─ package.json # Prosjektkonfigurasjon, scripts og dependencies
 └─ README.md # Denne filen
+
