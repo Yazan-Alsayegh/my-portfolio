@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/my-portfolio/static/css/main.0f8467a3.css",
+    "main.js": "/my-portfolio/static/js/main.bcf3cda5.js",
+    "static/js/453.acca0757.chunk.js": "/my-portfolio/static/js/453.acca0757.chunk.js",
+    "static/media/Treningssenter.png": "/my-portfolio/static/media/Treningssenter.0b8a94e806d5fb228562.png",
+    "static/media/FitX-Treningssenter 1.png": "/my-portfolio/static/media/FitX-Treningssenter 1.8b816577b247b4892e0b.png",
+    "static/media/OAP-Transportsystem 3.png": "/my-portfolio/static/media/OAP-Transportsystem 3.9ade92d6485ca7cf0307.png",
+    "static/media/OAP-Transportsystem 2.png": "/my-portfolio/static/media/OAP-Transportsystem 2.b7a059248d8a2a1fe187.png",
+    "static/media/FitX-Treningssenter 2.png": "/my-portfolio/static/media/FitX-Treningssenter 2.50f3a9367c73414d96a3.png",
+    "static/media/OAP-Transportsystem 1.png": "/my-portfolio/static/media/OAP-Transportsystem 1.835aa463a47711cd36a5.png",
+    "static/media/FitX-Treningssenter 3.png": "/my-portfolio/static/media/FitX-Treningssenter 3.f8017f48e9f509c5144d.png",
+    "static/media/FitX-Treningssenter 4.png": "/my-portfolio/static/media/FitX-Treningssenter 4.7db4b22ace30b20fad4e.png",
+    "index.html": "/my-portfolio/index.html",
+    "main.0f8467a3.css.map": "/my-portfolio/static/css/main.0f8467a3.css.map",
+    "main.bcf3cda5.js.map": "/my-portfolio/static/js/main.bcf3cda5.js.map",
+    "453.acca0757.chunk.js.map": "/my-portfolio/static/js/453.acca0757.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f8467a3.css",
+    "static/js/main.bcf3cda5.js"
+  ]
+}
